@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMART and SAFETY HOME</title>
+    <link rel="icon" href="img/icon.png" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <!-- <h1>SMART and SAFETY HOME</h1> -->
+        <div class="header-text">
+          <!-- <h2 class="header-text-user">Hello, userName!</h2> -->
+        </div>
+      </div>
+    </header>
+    <div class="screenparts">
+      <section>
+        <div class="room">
+          <ul class="room__nav"></ul>
+          <div class="room__vision">
+            <div class="room__image">
+              <img
+                class="room__cameraoff"
+                src="img/cameraoff.png"
+                alt="room__cameraoff"
+              />
+              <img class="rec-icon" src="img/rec-dot.png" alt="record-dot" />
+              <p class="current-time"></p>
+              <img
+                class="room__image-photo"
+                src="img/nocamera.jpg"
+                alt="room__image-photo"
+              />
+            </div>
+
+            <div class="room__camera">
+              <h3 class="camera-text">Recording in progress</h3>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-rec" checked />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+          <div class="buttons">
+            <div id="LedLights" class="button button-light off">
+              <img
+                class="buttons-icon"
+                src="img/buttons-icons-light.png"
+                alt="buttons-icon"
+              />
+              <div class="button-light-text">
+                <p class="buttons-name">LED LIGHT</p>
+                <p class="buttons-status"></p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-light" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+
+            <div id="Conditioner" class="button button-air off">
+              <img
+                class="buttons-icon"
+                src="img/buttons-icons-air.png"
+                alt="buttons-icon"
+              />
+              <div class="button-air-text">
+                <p class="buttons-name">CONDITIONER</p>
+                <p class="buttons-status"></p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-air" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div id="SmartTV" class="button button-tv off">
+              <img
+                class="buttons-icon"
+                src="img/buttons-icons-tv.png"
+                alt="buttons-icon"
+              />
+              <div class="button-tv-text">
+                <p class="buttons-name">SMART TV</p>
+                <p class="buttons-status"></p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-tv" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div id="Blinds" class="button button-blinds off">
+              <img
+                class="buttons-icon"
+                src="img/buttons-icons-blinds.png"
+                alt="buttons-icon"
+              />
+              <div class="button-blinds-text">
+                <p class="buttons-name">BLINDS</p>
+                <p class="buttons-status"></p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" class="checkbox-blinds" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+      </section>
+      <section class="settings">
+        <div class="settings-box">
+          <div class="LedLights-set">
+            <p class="settings__title">LED LIGHT settings:</p>
+            <div class="LedLights-set-box">
+              <div class="LedLights-set-boxpart">
+                <div class="LedLights-set-radiobuttons">
+                  <div class="LedLights-set-radiobutton">
+                    <input id="radio-1" name="DAY LIGHT" type="radio" />
+                    <label for="radio-1" class="radio-label">DAY LIGHT</label>
+                  </div>
+
+                  <div class="LedLights-set-radiobutton">
+                    <input id="radio-2" name="SOFT LIGHT" type="radio" />
+                    <label for="radio-2" class="radio-label">SOFT LIGHT</label>
+                  </div>
+
+                  <div class="LedLights-set-radiobutton">
+                    <input id="radio-3" name="COLD LIGHT" type="radio" />
+                    <label for="radio-3" class="radio-label">COLD LIGHT</label>
+                  </div>
+                </div>
+              </div>
+              <div class="LedLights-set-boxpart">
+                <div class="LedLights-set-delay">
+                  <p class="LedLights-set-delay-text">Turn OFF in:</p>
+                  <label>
+                    <input
+                      type="text"
+                      class="LedLights-off-delay"
+                      placeholder="15"
+                    />
+                    minutes</label
+                  >
+                  <a class="LedLights-off-delay-btn" href="#">Apply</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-box">
+          <div class="Conditioner-set">
+            <p class="settings__title">CONDITIONER settings:</p>
+            <div class="Conditioner-set-box">
+              <div class="Conditioner-set-boxpart-1">
+                <div class="Conditioner-set-boxpart">
+                  <div class="Conditioner-set-temperature">
+                    <label for="temperature"
+                      >Temperature
+                      <span id="temperatureValue" class="temperatureValue"
+                        >18</span
+                      ></label
+                    >
+                    <input
+                      type="range"
+                      class="temperatureRange"
+                      name="temperature"
+                      min="12"
+                      max="31"
+                      value="18"
+                    />
+                  </div>
+                </div>
+                <div class="Conditioner-set-boxpart">
+                  <div class="Conditioner-set-power">
+                    <p class="Conditioner-set-power-title">Blowpower:</p>
+                    <select id="Conditioner-set-power">
+                      <option value="Low">Low</option>
+                      <option value="Medium" selected>Medium</option>
+                      <option value="Strong">Strong</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="Conditioner-set-boxpart">
+                <div class="Conditioner-set-delay">
+                  <p class="Conditioner-set-delay-text">Turn OFF in:</p>
+                  <label>
+                    <input
+                      type="text"
+                      class="Conditioner-off-delay"
+                      placeholder="10"
+                    />
+
+                    minutes</label
+                  >
+                  <a class="Conditioner-off-delay-btn" href="#">Apply</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-box">
+          <div class="SmartTV-set">
+            <p class="settings__title">SMART TV settings:</p>
+            <div class="SmartTV-set-box">
+              <div class="SmartTV-set-boxpart-1">
+                <div class="SmartTV-set-boxpart">
+                  <div class="SmartTV-set-volume">
+                    <label for="volume"
+                      >Volume
+                      <span id="volumeValue" class="volumeValue"
+                        >12</span
+                      ></label
+                    >
+                    <input
+                      type="range"
+                      class="volumeRange"
+                      name="volume"
+                      min="0"
+                      max="100"
+                      value="12"
+                    />
+                  </div>
+                </div>
+                <div class="SmartTV-set-boxpart">
+                  <div class="SmartTV-set-channel">
+                    <p class="SmartTV-set-channel-title">Choose channel:</p>
+                    <button class="decreaseChannel">-</button>
+                    <input
+                      type="number"
+                      class="channelInput"
+                      value="69"
+                      min="0"
+                      max="99"
+                    />
+                    <button class="increaseChannel">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="SmartTV-set-boxpart">
+                <div class="SmartTV-set-delay">
+                  <p class="SmartTV-set-delay-text">Turn OFF in:</p>
+                  <label>
+                    <input
+                      type="text"
+                      class="SmartTV-off-delay"
+                      placeholder="15"
+                    />
+
+                    minutes</label
+                  >
+                  <a class="SmartTV-off-delay-btn" href="#">Apply</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="settings-box">
+          <div class="Blinds-set">
+            <p class="settings__title">BLINDS settings:</p>
+            <div class="Blinds-set-box">
+              <div class="Blinds-set-boxpart">
+                <div class="Blinds-set-radiobuttons">
+                  <div class="Blinds-set-radiobutton">
+                    <input id="radio-1" name="NIGHT" type="radio" />
+                    <label for="radio-1" class="radio-label">NIGHT</label>
+                  </div>
+
+                  <div class="Blinds-set-radiobutton">
+                    <input id="radio-2" name="DAY" type="radio" />
+                    <label for="radio-2" class="radio-label">DAY</label>
+                  </div>
+
+                  <div class="Blinds-set-radiobutton">
+                    <input id="radio-3" name="EVENING" type="radio" />
+                    <label for="radio-3" class="radio-label">EVENING</label>
+                  </div>
+                </div>
+              </div>
+              <div class="Blinds-set-boxpart">
+                <div class="Blinds-set-delay">
+                  <p class="Blinds-set-delay-text">Turn OFF in:</p>
+                  <label>
+                    <input
+                      type="text"
+                      class="Blinds-off-delay"
+                      placeholder="15"
+                    />
+
+                    minutes</label
+                  >
+                  <a class="Blinds-off-delay-btn" href="#">Apply</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-container">
+          <button class="addRoom-btn" onclick="openModal()">
+            ADD NEW ROOM
+          </button>
+          <button class="removeRoom-btn" onclick="removeRoom()">
+            REMOVE ROOM
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div id="addModal" class="modal">
+      <div class="modal-content">
+        <span class="cancel-modal" onclick="closeModal()">close</span>
+        <p class="modal__title">Fill this form to add New Room</p>
+
+        <div>
+          <form action="" class="modal__userForm">
+            <label for="roomName">Room name: </label><br />
+            <input
+              type="text"
+              id="roomName"
+              required
+              placeholder="Bathroom"
+            /><br />
+            <label for="cameraIP">Room camera IP: </label><br />
+            <input
+              type="text"
+              id="cameraIP"
+              required
+              placeholder="img/bathroom.jpg"
+            /><br />
+            <div class="modal__checkboxes">
+              <p class="modal__checkboxes-title">
+                Choose devices in this room:
+              </p>
+              <div class="modal__checkboxes-choose">
+                <div>
+                  <input
+                    class="modal__checkboxes-light"
+                    type="checkbox"
+                    value=""
+                    id="checkBox"
+                  />
+                  <label class="checkBox-label" for="modal__checkboxes-light"
+                    >Led Lights</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="modal__checkboxes-conditioner"
+                    type="checkbox"
+                    value=""
+                    id="checkBox"
+                  />
+                  <label
+                    class="checkBox-label"
+                    for="modal__checkboxes-conditioner"
+                    >Conditioner</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="modal__checkboxes-TV"
+                    type="checkbox"
+                    value=""
+                    id="checkBox"
+                  />
+                  <label class="checkBox-label" for="modal__checkboxes-TV"
+                    >Smart TV</label
+                  >
+                </div>
+                <div>
+                  <input
+                    class="modal__checkboxes-blinds"
+                    type="checkbox"
+                    value=""
+                    id="checkBox"
+                  />
+                  <label class="checkBox-label" for="modal__checkboxes-blinds"
+                    >Blinds</label
+                  >
+                </div>
+              </div>
+              <input
+                class="modal__userForm-submit"
+                type="submit"
+                value="Add new room"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
